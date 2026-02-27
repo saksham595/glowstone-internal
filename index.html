@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowstone Internal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: #0c0c0d;
+    color: #fff;
+    padding: 5px 20px 40px; /* almost no top padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin: 10px 0 20px; /* tight */
+}
+
+.header img {
+    width: 170px; /* premium size again */
+    display: block;
+    margin: 0 auto 8px;
+}
+
+/* subtle divider */
+.header::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 1px;
+    margin: 8px auto 0;
+    background: linear-gradient(90deg, transparent, #d4af37, transparent);
+    opacity: 0.7;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* TILE */
+.tile {
+    background: #151517;
+    border: 1px solid rgba(255, 215, 0, 0.12);
+    border-radius: 14px;
+    padding: 24px 18px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.25s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.55);
+}
+
+.tile:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.7);
+}
+
+/* ICON */
+.tile i {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    stroke: #d4af37;
+}
+
+/* TITLE */
+.tile h3 {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* PRICE BUTTONS */
+.price-buttons {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.price-buttons a {
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 11px;
+    background: #d4af37;
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.price-buttons a:hover {
+    opacity: 0.85;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .header img {
+        width: 140px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <img src="glowstone-logo.png" alt="Glowstone Logo">
+    </div>
+
+    <div class="grid">
+
+        <a class="tile" href="https://lookerstudio.google.com/reporting/350cfcdc-6f5a-441d-87ec-ec311476c07f/page/p_uk9qd8nqzd" target="_blank">
+            <i data-lucide="archive"></i>
+            <h3>FG Inventory</h3>
+        </a>
+
+        <a class="tile" href="https://lookerstudio.google.com/reporting/a7f44f4d-53d5-4c2e-8d94-28cca068043e/page/page_12345" target="_blank">
+            <i data-lucide="trending-up"></i>
+            <h3>Order & Dispatch Trend</h3>
+        </a>
+
+        <a class="tile" href="https://lookerstudio.google.com/reporting/80cab419-1bc0-4f32-b77c-ddbc834aaf79/page/LS5HF" target="_blank">
+            <i data-lucide="boxes"></i>
+            <h3>RM Inventory</h3>
+        </a>
+
+        <a class="tile" href="https://lookerstudio.google.com/reporting/e66d0979-17fb-4b08-bb25-ddf1fd9bd732/page/uA2aF/edit" target="_blank">
+            <i data-lucide="shield-check"></i>
+            <h3>Quality Analysis</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1gfCpufqcKwSw82n4a6zlC_lpWtdzEEuqzDLxxRio-WI/edit?gid=830007617#gid=830007617" target="_blank">
+            <i data-lucide="database"></i>
+            <h3>Product Master</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1h1VJ2wgumaZLoVqAUO4ZeTQdQmGwv2tX0Hb-fel5kMg/edit?gid=0#gid=0" target="_blank">
+            <i data-lucide="file-text"></i>
+            <h3>S.O Sheet</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1FICM6SOeC-Za2C13CSY4bxqHphnWZBtKiIGHJ8SCiaA/edit?gid=0#gid=0" target="_blank">
+            <i data-lucide="clipboard-list"></i>
+            <h3>Memo Sheet</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1MzA9xM-scwv992py94Kg0l5mmLWI_mz-UZc6vHALUc8/edit?gid=951886496#gid=951886496" target="_blank">
+            <i data-lucide="calendar"></i>
+            <h3>Production Planning</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1uCNG6delO53YCy8KlsXi0gYgtr30nJF1F9OSRq74GYg/edit?gid=1974622930#gid=1974622930" target="_blank">
+            <i data-lucide="check-square"></i>
+            <h3>Quality Master Sheet</h3>
+        </a>
+
+        <a class="tile" href="https://docs.google.com/spreadsheets/d/1Lc1ppsxX6v2QSwXVirXoiw-q8hq58UmDM6mGGQIvDUA/edit?gid=0#gid=0" target="_blank">
+            <i data-lucide="truck"></i>
+            <h3>Courier Tracking</h3>
+        </a>
+
+        <a class="tile" href="http://businessdatafrontend.s3-website.ap-south-1.amazonaws.com/index.html" target="_blank">
+            <i data-lucide="users"></i>
+            <h3>Lead Generator Tool</h3>
+        </a>
+
+        <div class="tile">
+            <i data-lucide="calculator"></i>
+            <h3>Price Calculator</h3>
+            <div class="price-buttons">
+                <a href="http://146.190.157.80/admin/login" target="_blank">Admin</a>
+                <a href="http://146.190.157.80" target="_blank">User</a>
+            </div>
+        </div>
+
+        <a class="tile" href="https://drive.google.com/drive/u/1/folders/1wDPb-AJfCbHtDysQclANR_wIpw3nAhVb" target="_blank">
+            <i data-lucide="image"></i>
+            <h3>Photoshoot Repository</h3>
+        </a>
+
+    </div>
+
+</div>
+
+<script>
+lucide.createIcons();
+</script>
+
+</body>
+</html>
